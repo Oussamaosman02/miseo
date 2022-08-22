@@ -1,0 +1,702 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Seo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Mi <abbr title="Search Engine Optimization (optimización para motores de búsqueda)">SEO</abbr> </h1>
+    <h2>La página con todos los consejos que necesito sobre seo</h2>
+    <section>
+      <h3>Server side Seo(head)</h3>
+      <p class="centro">
+        Aquí está todo lo que es recomendable poner en el head, también que hay
+        que poner en el head <a href="#nextjs">si es next js</a>
+      </p>
+      <article>
+        <h4>Fallos más comunes</h4>
+        <ul class="listatop">
+          <li>
+            Contenido duplicado
+          </li>
+          <li>
+            Falta de etiquetas alt
+          </li>
+          <li>
+            Etiquetas title duplicadas
+          </li>
+          <li>
+            Enlaces internos rotos
+          </li>
+          <li>
+            Meta description duplicadas
+          </li>
+          <li>
+            Bajo ratio del texto HTML
+          </li>
+          <li>
+            Falta de meta description
+          </li>
+          <li>
+            Enlaces externos rotos
+          </li>
+          <li>
+            Etiquetas H1 multiples
+          </li>
+          <li>
+            Falta de H1
+          </li>
+          <li>
+            Baja densidad de palabras
+          </li>
+          <li>
+            Contenido duplicado en H1 y title
+          </li>
+          <li>
+            Exceso de texto en title            
+          </li>
+          <li>
+            Demasiados enlaces on page
+          </li>
+          <li>
+            Idioma no especificado
+          </li>
+          <li>
+            Redirecciones temporales(302)
+          </li>
+          <li>
+            Imágenes internas rotas
+          </li>
+          <li>
+            Falta de title
+          </li>
+          <li>
+            Insuficiente texto en title
+          </li>
+        </ul>
+        <h6>Fuente: Semrush</h6>
+      </article>
+      <article>
+        <h4>Soluciones a errores frecuentes</h4>
+        <ul class="listatop">
+          <li>
+            <h5>Contenido Duplicado</h5>
+            <details>
+                <summary> </summary>
+                <p>Fusionalo o elimina el inecesario</p>
+                <p>También usando <a href="#canon" >canonical</a> </p>
+            </details>
+          </li><li>
+            <h5>Ratio del texto</h5>
+            <details>
+                <summary> </summary>
+                <p>Esto significa que, proporcionalmente, hay más código HTML que texto visible</p>
+                <p>El límite sugerido está en un ratio de un 20%</p>
+                <p>Así que, debes profundizar en cada tema y que tu contenido aporte valor</p>
+            </details>
+          </li><li>
+            <h5>Contenido Duplicado</h5>
+            <details>
+                <summary> </summary>
+                <p>Fusionalo o elimina el inecesario</p>
+                <p>También usando <a href="#canon" ></a> canonical</p>
+            </details>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h4>Head</h4>
+        <ul class="listatop">
+          <li>
+            <h5>Meta Robots</h5>
+            <details>
+                <summary> </summary>
+            <p>
+              La tag de meta robots es predominante, igual que el robots txt, lo
+              que significa que se seguirá al pie de la letra, a diferencia de
+              otras tags como canonical que solo es un "a tener en cuenta"
+            <br/>
+            <div class="codigo">
+
+                <span><</span>meta name="robots" content="index,follow" />
+            </div>  
+              <br/>
+            </p>
+            <p>
+              Por defecto es index,follow y los parametros pueden ser tanto index, follow como no index nofollow pero:¿Qué significa esto?
+              <ul>
+                <li>
+                    index: significa que se autoriza a que la página sea indexada en el motor de búsqueda
+                </li>
+                <li>
+                    noindex: significa que no se quiere indexar la página en ningún motor de búsqueda.esta es útil para páginas que están sin acabar o ya sea una zona restringida. 
+                </li>
+                <li>
+                    follow: esto le indica al crawler o "araña" que puede seguir todos los links que encontremos en la página.
+                </li>
+                <li>
+                    nofollow: esto le dices al crawler que no debe seguir los links que se encuentran en la página
+                </li>
+              </ul>
+              <br/>
+            </p>
+            <p>
+              Puede haber combinaciones de:
+              <ul>
+                <li>
+                    noindex,nofollow: ni se indexa ni se siguen los links
+                </li>
+                <li>
+                    index,nofollow: se indexa pero no se siguen los links
+                </li>
+                <li>
+                    index,follow: que es la que viene por defecto, se indexa y si se permite seguir los links
+                </li>
+                <li>
+                    all: esta es igual al index,follow solo que para vagos, así no escribes tanto
+                </li>
+                <li>
+                  <a href="https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives" target="_blank" rel="noopener noreferrer">
+                    Todas las posibilidades-<b>Google</b>
+                  </a>
+                </li>
+              </ul>
+              <br/>
+            </p>
+            </details>
+          </li>
+          <li>
+            <h5>Google tags</h5>
+             <details>
+                <summary> </summary>
+            <ul>
+                <li>
+                        <h6>Google Bot</h6>
+                    <p>
+                      <div class="codigo">
+
+                          <span><</span>meta name="googlebot" content="noindex,nofollow" />
+                      </div>  
+                        <br/>
+                        Está es igual al robots, solo que específica de google, por si hubiera algún caso en el que quisieras tratar alguna página distinto en este motor de búsqueda
+                    </p>
+                </li>
+                <li>
+                    <h6>nositelinkssearchbox</h6>
+                    <p>
+                      <div class="codigo">
+
+                          <span><</span>meta name="google" content="nositelinkssearchbox" />
+                      </div>  
+                        <br/>
+                        Hay veces que cuando buscas en google un sitio, justo en la SERP aparece en eses sitio una barrita de búsqueda, para buscar en ese sitio, pues con esto lo evitas
+                    </p>
+                </li>
+                <li>
+                    <h6>notranslate</h6>
+                    <p>
+                      <div class="codigo">
+
+                          <span><</span>meta name="google" content="notranslate" />
+                      </div>  
+                        <br/>
+                        Esto evita que la página sea traducida
+                    </p>
+                </li>
+            </ul>
+        </details>
+
+          </li>
+          <li>
+            <h5 id="canon" >Canonical</h5>
+            <details>
+                <summary> </summary>
+                <p>
+                  Una URL canónica es la url que (según el motor de
+                   búsqueda) es la más relevante sobre algunas
+                    duplicadas
+                <br/>
+                <div class="codigo">
+
+                    <span><</span>link rel="canonical" href="https://example.com/products/phone" />
+                </div>
+                  </p>
+                  <p>
+                    Estas URL canónicas son muy útiles para que google pueda diferenciar las url originales de las duplicadas.
+                    Si hay URL duplicadas y no se indica cual es la canónica, google podría escoger mal o incluso no indexar ninguna de las dos
+                  </p>
+            </details>
+          </li>
+          <li>
+            <h5>Meta Description</h5>
+            <details>
+              <summary> </summary>
+            <p>
+              La meta description sirve para describir el contenido de la página
+              <br/>
+              Esta descripción aparecerá debajo del título y la URL de tu página en la SERP
+              <div class="codigo">
+                <span><</span>meta name="description" content="Entre 120 y 140 caracteres¡No olvides incluir tu palabra clave!">
+              </div>
+
+            </p>
+            <p>
+              <h6>
+                Tips
+              </h6>
+              <ul>
+                <li>
+                 <b>Escribelas como si fuera un anuncio</b>
+                </li>
+                <li>
+                  <b>
+                    Lenguaje activo
+                  </b>
+                </li>
+                <li>
+                  <b>Como aparecen en la SERP, deberían estar orientadas a obtener <this>más clics</this></b>
+                </li>
+                <li>
+                    Alusiones a una de las 4 emociones más importantes: <b> Contento, Triste, Enfadado/Disgustado o Asustado/Sorprendido
+                  </b>
+                </li>
+                <li>
+                  <b>
+                    Tener descripciones <this>únicas</this> para cada página de tu web
+                  </b>
+                </li>
+                <li>
+                  <b>
+                    Incluir tu <this>palabra clave</this>
+                  </b>
+                </li>
+                <li>
+                  <b>
+                    Que coincidan con tu contenido
+                  </b>
+                </li>
+                <li>
+                  <b>
+                    <this>Solo una</this> meta descripción
+                  </b>
+                </li>
+                <li>
+                  <b>
+                    Estrategia USP: "lo que tienes que los competidores no tienen"
+                  </b>
+                </li>
+              </ul>
+            </p>
+            <p>
+              En resumen, la meta description debería agregar una llamada a la acción clara, abordar un punto de dolor emocional u ofrecer un beneficio específico a los visitantes.
+            </p>
+            <p>
+              <h6>Herramienta</h6>
+              <a href="https://www.portent.com/serp-preview-tool/" target="_blank" rel="noopener noreferrer">
+                Serp Preview Tool -<b>Gratis</b>
+              </a>
+            </p>
+            </details>
+          </li>
+          <li>
+            <h5>Title</h5>
+            <details>
+              <summary> </summary>
+              <p>
+                Un tittle es el título de la página que aparece directamente debajo de la URL en la SERP y en la pestaña del navegador
+                <br/>
+                Para establecer el título de una página, utiliza la etiqueta title en el HTML alrededor de tu texto
+                <div class="codigo">
+                  <span><</span>title>Este es el título <span><</span>/title>
+                </div>
+              </p>
+              <p>
+                <h6>Tips</h6>
+                <ul>
+                  <li>
+                    <b>
+                      Indica la temática de la web
+                    </b>
+                  </li>
+                  <li>
+                    <b>
+                      Haz que sea simple pero eficaz
+                    </b>
+                  </li>
+                  <li>
+                    <b>
+                      Precisa y relevante sobre el contenido de la página
+                    </b>
+                  </li>
+                  <li>
+                    <b>
+                      Incluye la palabra clave más relevante
+                    </b>
+                  </li>
+                  <li>
+                    <b>
+                      Desencadenar un pensamiento o emoción
+                    </b>
+                  </li>
+                  <li>
+                    <b>
+                      Palabras desencadenantes: <this>adverbios interrogativos</this> (cómo, qué, cuánto, dónde) o <this>adjetivos</this> (mejor, definitiva, etc)
+                    </b>
+                  </li>
+                  <li>
+                    <b>
+                     <this>55-60</this> caracteres
+                    </b>
+                  </li>
+                  <li>
+                    <b>
+                      Etiquetas <this>únicas</this>
+                    </b>
+                  </li>
+                </ul>
+              </p>
+              <p>
+                En resumen, las meta tittle deben tener la longitud adecuada, que ser únicas para cada página, describir concisamente el contenido de la página con la palabra clave objetivo y estar enfocadas a conseguir el clic
+              </p>
+              <p>
+                <h6>Herramienta</h6>
+                <a href="https://www.highervisibility.com/seo/tools/serp-snippet-optimizer/" target="_blank" rel="noopener noreferrer">
+                  Serp Snippet Optimizer - <b>Gratis</b>
+                </a>
+              </p>
+            </details>
+          </li>  <li>
+            <h5>Open Graph</h5>
+            <details>
+              <summary> </summary>
+              <p>
+                El protoclo Open Graph fue desarrolado por Facebook y hace que tus páginas se vean mejor cuando son compartidas en redes sociales
+              <div class="codigo">
+                <span><</span>meta property="og:title" content="Social Title for Cool Page" />
+              </div>
+              </p>
+              <p>
+                Existen varios tipos, así como de twitter y otras redes, aquí nos centraremos solo en og
+                <ul>
+                  <li>
+                    <h6>Titulo</h6>
+                    <p>
+                      <div class="codigo">
+                        <span><</span>meta property="og:title" content="Social Title for Cool Page" />
+                      </div>
+                      En esta debes poner el título de tu página
+                    </p>
+                  </li>
+                  <li>
+                    <h6>Idioma</h6>
+                    <p>
+                      <div class="codigo">
+                        <span><</span>meta property="og:locale" content="es_ES" />
+                      </div>
+                      En esta debes poner el idioma de tu página
+                    </p>
+                  </li>
+                  <li>
+                    <h6>Descripción</h6>
+                    <p>
+                      <div class="codigo">
+                        <span><</span>meta property="og:description" content="And a social description for our cool page"
+                      />
+                      </div>
+                      Esta será una descripcion breve que se mostrará debajo de la foto y del título
+                    </p>
+                  </li>
+                  <li>
+                    <h6>Imagen</h6>
+                    <p>
+                      <div class="codigo">
+                        <span><</span>meta property="og:image" content="https://example.com/images/cool-page.jpg"
+                      />
+                      </div>
+                      Está imagen debe ser representativa del contenido ya que se verá en grande
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <h6>Url</h6>
+                    <p>
+                      <div class="codigo">
+                        <span><</span>meta property="og:url" content="https://exaple.com/example/" />
+                      </div>
+                      En esta debes poner la url de tu página
+                    </p>
+                  </li>  
+                  <li>
+                    <h6>Site Name</h6>
+                    <p>
+                      <div class="codigo">
+                        <span><</span>meta property="og:site_name" content="Example" />
+                      </div>
+                      En esta debes poner el nombre de tu página, como el título
+                    </p>
+                  </li>
+                  <li>
+                    <h6>Imagen tamaño</h6>
+                    <p>
+                      <div class="codigo">
+                        <span><</span>meta property="og:image:width" content="500" />
+                        <span><</span>meta property="og:image:height" content="400" />
+                      </div>
+                      En estas debes poner el tamaño del icono de tu página
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </details>
+          </li> <li>
+            <h5>Datos estructurados</h5>
+            <details>
+              <summary> </summary>
+              <p>
+                Estos facilitan a los crawlers a entender tu página.Se usa el vocubulario de <a href="https://schema.org/" target="_blank" rel="noopener noreferrer">Schema.org</a>
+              </p>
+              <p>
+                Por ejemplo, en una página de recetas, podrías marcar con datos estructurados los ingredientes, el tiempo y la temperatura de cocción, o las calorías, entre otros detalles.
+              </p>
+              <p>
+                <a href="#nextjs">
+                  Implementarla en Next js
+                </a>
+              </p>
+              <div id="jsonld" class="codigo">
+                <pre>
+{
+  "@context": "https://schema.org",
+"@graph": [
+  {
+    "@type": "WebSite",
+    "@id": "${URL}/#website",
+    "url": "${URL}/",
+    "name": "${title}",
+    "description": "${short_description}",
+    "potentialAction": [
+      {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "${URL}/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    ],
+    "inLanguage": "es"
+  },
+  {
+    "@type": "ImageObject",
+    "@id": "$1{URL}/#primaryimage",
+    "inLanguage": "es",
+    "url": "$1{URL}/${primary_image}",
+    "contentUrl": "$1{URL}/${primary_image}",
+    "width": 900,
+    "height": 432,
+    "caption": "$1{image_figcaption}"
+  },
+  {
+    "@type": "WebPage",
+    "@id": "$1{URL}/#webpage",
+    "url": "$1{URL}/",
+    "name": "$1{meta_title}",
+    "isPartOf": { "@id": "${URL}/#website" },
+    "primaryImageOfPage": { "@id": "$1{URL}/#primaryimage" },
+    "datePublished": "$1{}2018-02-20T10:32:57+00:00",
+    "dateModified": "$1{}2021-07-27T11:25:43+00:00",
+    "description": "$1{meta_description}",
+    "breadcrumb": { "@id": "$1{URL}/#breadcrumb" },
+    "inLanguage": "es",
+    "potentialAction": [
+      { "@type": "ReadAction", 
+      "target": ["$1{URL}/"] }
+    ]
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "$1{URL}/#breadcrumb",
+    "itemListElement": [
+      { "@type": "ListItem", 
+      "position": 1, 
+      "name": "Home" }
+    ]
+  }
+  ]
+}                
+                </pre>
+              </div>
+              <p>
+                <b>Cosas a tener en cuenta:</b>
+                <ul>
+                  <li>
+                    BreadcrumbList: Una BreadcrumbList es una ItemList que consta de una cadena de páginas web vinculadas, normalmente descritas usando al menos su URL y su nombre, y normalmente terminando en la página actual (sin URL).
+                  <p>
+                    EL BreadcrumbList también podría ser así:
+                    <div class="codigo">
+                      <pre>
+{
+  "@type": "BreadcrumbList",
+  "@id": "$1{URL}#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "${URL}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "${URL2}blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "$1{title}"
+    }
+  ]
+},
+                      </pre>
+                    </div>
+                  </p>
+                  </li>
+                  <li>
+                    Donde pone ${} es referente a la página general, está en todas, sin embargo el $1{} solo sirve para la página en cuestion
+                  </li>
+                  <li>
+                    En el image Object, hay que poner el width y el height relativo a nuestra imágen
+                  </li>
+                  <li>
+                    Todo esto iría <i>wrapped</i> o englobado dentro de una etiqueta script tal que así:
+                    <div class="codigo">
+                     <span><</span>script type="application/ld+json" >
+                        {Aqui el schema}
+                     <span><</span>/script>
+                    </div>
+                  </li>
+                </ul>
+              </p>
+            </details>
+        </ul>
+      </article>
+      <article id="nextjs">
+        <h4>Next JS</h4>
+        <ul class="listatop">
+          <li>
+            <h5>Datos Estructurados</h5>
+            <details>
+                <summary> </summary>
+                <p>
+                  <a href="https://nextjs.org/learn/seo/rendering-and-ranking/metadata" target="_blank" rel="noopener noreferrer">Next JS Oficial</a>
+                </p>
+                <p>
+                  <details>
+                    <summary>Direct</summary>
+                  <ul>
+                    <li>
+                      Necesitaremos el next/head 
+                      <div class="codigo">
+                        import Head from 'next/head';
+                      </div>
+                    </li>
+                    <li>
+                      En la funcion, antes del return creaos otra funcion.
+                      <div class="codigo">
+                        <pre>
+function ProductPage() {
+  function addProductJsonLd() {
+    return {}
+  }
+  return ()
+                          </pre>
+                      </div>
+                    </li>
+                    <li>
+                      Dentro del return de esta funcion interior añadimos un __html: y el objeto que queremos con template literals
+                      <div class="codigo">
+                        <pre>
+return {
+  __html: ``
+}
+                        </pre>
+                      </div>
+                    </li>
+                    <li>
+                      Dentro de este template literals irá todo el código del  <a href="#jsonld">jsonLd</a> 
+                      <div class="codigo">
+                        <pre>
+function ProductPage() {
+  function addProductJsonLd() {
+    return {
+      __html: `{
+        
+      }
+      `,
+    };
+}
+                          </pre>
+                      </div>
+                    </li>
+                    <li>
+                      Ahora,dentro de nuestro head de 'next/head' añadimos la etiqueta del script al final de este
+                      <div class="codigo">
+                        <pre>
+<span><</span>script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={addProductJsonLd()}
+    key="product-jsonld"
+/>
+                    </pre>
+                      </div>
+                      El addProductJsonLd es el nombre de nuestra funcion interna
+                    </li>
+                  </ul>
+                  </details>
+                </p>
+            </details>
+          </li>
+          <li>
+            <h5>Eliminar Js no utilizado</h5>
+            <details>
+              <summary> </summary>
+              <p>
+                Esto lo haremos si importamos bibliotecas de terceros que solo se usaran en cierta acción y no todo el tiempo
+              </p>
+              <p>
+                <a href="https://nextjs.org/learn/seo/improve/dynamic-imports" target="_blank" rel="noopener noreferrer">
+                  Next Js Oficial
+                </a>
+              </p>
+              <p>
+                Para componentes internos que no se necesiten hasta cierta acción (pulsando un botón, por ejemplo) se debe usar el componente dynamic
+              </p>
+            <p>
+              <a href="https://nextjs.org/learn/seo/improve/dynamic-import-components" target="_blank" rel="noopener noreferrer">
+                Next Js Oficial
+              </a>
+            </p>
+            </details>
+          </li>
+          <li>
+            <h5>Fuentes</h5>
+            <details>
+              <summary> </summary>
+              <p>
+                Next Js ofrece una optimización de las fuentes para que no afecten al rendimiento
+              </p>
+              <p>
+                <a href="https://nextjs.org/docs/basic-features/font-optimization" target="_blank" rel="noopener noreferrer">
+                  Next Js Oficial
+                </a>
+              </p>
+            </details>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </body>
+</html>

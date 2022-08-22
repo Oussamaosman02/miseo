@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap');
+*{
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+.centro {
+  width: 100%;
+  text-align: center;
+}
+
+.listatop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.listatop > li {
+  margin: 0 3vw;
+}
+.listatop details {
+  position: relative;
+}
+.listatop details > summary::marker {
+  content: ">";
+  color: red;
+}
+.listatop details[open] {
+  width: 90vw;
+}
+.listatop details[open] > summary::marker {
+  content: "x";
+}
+.codigo {
+  margin: 0 1vw;
+  width: 70vw;
+  background-color: #111;
+  color: fafafa;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 100%;
+  font-family: 'Roboto Mono', monospace;
+}
+this {
+  background-color: #00ff0044;
+  border-radius: 25px;
+  padding: 3px;
+}
