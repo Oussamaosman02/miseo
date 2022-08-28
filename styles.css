@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0%;
   box-sizing: border-box;
@@ -8,6 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -22,22 +24,28 @@ h4,
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.listatop > li {
+
+.listatop>li {
   margin: 0 3vw;
 }
-.listatop details {
+
+details {
   position: relative;
 }
-.listatop details > summary::marker {
+
+details>summary::marker {
   content: ">";
   color: red;
 }
-.listatop details[open] {
+
+details[open] {
   width: 90vw;
 }
-.listatop details[open] > summary::marker {
+
+details[open]>summary::marker {
   content: "x";
 }
+
 .codigo {
   margin: 0 1vw;
   width: 70vw;
@@ -48,8 +56,103 @@ h4,
   font-size: 100%;
   font-family: 'Roboto Mono', monospace;
 }
+
 this {
   background-color: #00ff0044;
   border-radius: 25px;
   padding: 3px;
+}
+
+.seo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.arti-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.arti-info h3 {
+  text-align: center;
+  width: 100%;
+}
+
+.ulinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ulinfo li {
+  width: 90%;
+  position: relative;
+  margin: 1vh auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+  border: 1px black solid;
+}
+
+.ulinfo li span {
+  background-color: black;
+  padding: 1.5px;
+  border-radius: 7px;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 0 3px wheat;
+}
+
+.ulinfo li b {
+  font-weight: 600;
+  background-color: #1113;
+  padding: 2px;
+  margin: 0 1px;
+  border-radius: 7px;
+}
+
+.ulinfo li p {
+  text-align: left;
+  margin-left: 3px;
+}
+
+.art2 {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.art2 h3 {
+  text-align: center;
+  width: 100%;
+}
+
+.ul2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ul2 li {
+  margin: 4%;
+}
+
+.ul2 li span {
+  font-weight: 600;
 }
